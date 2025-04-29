@@ -24,7 +24,7 @@ RAG_CONF_PATH = os.path.join(get_project_base_directory(), "conf")
 # Get storage type and document engine from system environment variables
 STORAGE_IMPL_TYPE = os.getenv('STORAGE_IMPL', 'MINIO')
 DOC_ENGINE = os.getenv('DOC_ENGINE', 'elasticsearch')
-
+# 王法翔修改测试
 ES = {}
 INFINITY = {}
 AZURE = {}
@@ -53,7 +53,7 @@ elif STORAGE_IMPL_TYPE == 'OSS':
 try:
     REDIS = decrypt_database_config(name="redis")
 except Exception:
-    REDIS = {}
+    REDIS = {}  
     pass
 DOC_MAXIMUM_SIZE = int(os.environ.get("MAX_CONTENT_LENGTH", 128 * 1024 * 1024))
 
